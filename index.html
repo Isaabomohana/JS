@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		
+		h1{
+			background-color: red;
+			font-size: 20;
+			font-style: arial;
+		}
+	</style>
+	<title>this is my index</title>
+</head>
+<body>
+<h1>Hello everybody</h1>
+<img src="images/download.jpg"><p>Wie heißen Sie?</p>
+<textarea id="textarea1"></textarea>
+<button onclick= but1()>Next</button>
+<textarea id="text1"></textarea>
+<script type="text/javascript">
+	function but1(){
+		var but = document.getElementById('textarea1').value;
+		document.getElementById('text1').innerHTML= "welcome "+" "+but ;
+	}
+</script>
+</body>
+</html>
