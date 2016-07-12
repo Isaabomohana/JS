@@ -10,7 +10,6 @@
 	<title>the biigest man</title>
 </head>
 <body>
-	<body>
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -18,20 +17,16 @@
 				</div>
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#">story 1</a></li>
+					<li><a onclick="story1Function()" href="#">story 1</a></li>
 					<li><a href="#">story 2</a></li> 
 					<li><a href="#">story 3</a></li> 
 				</ul>
 			</div>
-		</navstory
-		<textarea id="textarea1"></textarea>
-		<button onclick= but1()>Next</button>
-		<textarea id="text1"></textarea>
-		<script type="text/javascript">
-			function but1(){
-				var but = document.getElementById('textarea1').value;
-				document.getElementById('text1').innerHTML= "welcome "+" "+but ;
-			}
-		</script>
+		</nav>
+	<script type="text/javascript">
+		var story1Function () {
+			window.open("story1.html");
+		}
+	</script>	
 	</body>
 	</html>
