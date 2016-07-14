@@ -83,17 +83,17 @@ li.dropdown {
 	display: block;
 }
 
-/*textarea*/
-textarea {
+/*text*/
+.text {
 	font-family: 'Courgette', cursive;
 	font-size: 1em;
 	color:#fb810a;
-	background-color: rgba(0,0,0,0.6);
+	/*background-color: rgba(0,0,0,0.6);
 	border: 2px solid ;
 	border-radius: 12px;
 	position: center;
 	left: 50px;
-	top: 100px;
+	top: 100px;*/
 }
 
 /*buttons*/
@@ -224,3 +224,20 @@ user-select: none; */
 	text-align: center;
 	font-size: 12px;
 }
+
+/*images for fragen*/
+.img {
+	width:304px;
+	height:228px;
+	padding: 10px;
+    
+}
+
+input[type="checkbox"] { 
+  height: 20px; 
+  width: 20px; 
+  margin-right: 10px;
+  cursor: pointer;
+
+}	
+
