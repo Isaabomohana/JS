@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" type="text/css" href="style.css">
+
 <head>
 	<title>story1</title>
 </head>
 <body>
-<img src="images/wie.PNG" class="img">
-<p>Fragen</p>
-
-<form class="text">
-  <input type="radio" name="Fragen" value="xxx" >answer 1<br>
-  <input type="radio" name="Fragen" value="xxx">answer 2 <br>
-  <input type="radio" name="Fragen" value="xxx">answer 3<br>
-  <input type="submit" value="Submit">
-</form>
-
-
+  <img src="images/wie.PNG" class="img">
+  <p id="fragen"></p>
+  <ul>
+    <form class="text">
+       <input type="radio" name="Fragen" value="xxx" ><span id="ans1"></span><br>
+       <input type="radio" name="Fragen" value="xxx" ><span id="ans2"></span><br>
+      <input type="radio" name="Fragen" value="xxx" ><span id="ans3"></span><br>
+      <input type="submit" value="Submit" class="button" onclick="nextQuestion()">
+    </form>
+  </ul>
+  <script src="story1.js"></script>
 </body>
 </html>
