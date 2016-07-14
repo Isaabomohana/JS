@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" type="text/css" href="style.css">
 <head>
 	<title>story1</title>
 </head>
 <body>
 <h1>Welcome to story one</h1>
+	<textarea id="textarea1"></textarea>
+	<button class = "button" onclick= but1()>Submit</button>
+	<textarea id="text1"></textarea>
+	<script type="text/javascript">
+		function but1(){
+			var but = document.getElementById('textarea1').value;
+			document.getElementById('text1').innerHTML= "welcome "+" "+but ;
+		}
+	</script>
 </body>
 </html>
