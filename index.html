@@ -20,15 +20,19 @@
                 <a href="#" class="dropbtn">Storys</a>
             </li>
         </ul>
+        <div>
+         	<p>hallo </p>
+         	<p id="currentUser"></p>
+         </div>
     </header>
 
     <div class="content">
         <div class="content-item content-item-login login-card active">
             <h1>Log-in</h1><br>
             <form>
-                <input type="text" name="user" placeholder="Username">
+                <input type="text" id="userName" placeholder="Username">
                 <!--<input type="password" name="pass" placeholder="Password">-->
-                <input type="submit" name="login" class="login login-submit" value="login">
+                <input type="submit" onclick="logIn()" class="login login-submit" value="login">
             </form>
 
             <div class="content-item content-item-login-help login-help">
@@ -44,6 +48,8 @@
     <div class="content-item content-item-stories">
         <div class="story active" id="story-1">
          <img src="images/wie.PNG" class="img">
+         
+
          <p id="fragen"></p>
          <ul>
             <form class="text">

@@ -1,12 +1,15 @@
  /*the html structur*/
  var currentStory = 1;
+ /*the html structur*/
+
+ var loginNames = [];
+
+ var questionCursor = 0;
 
 
 
-var questionCursor = 0;
-
-var questions = [
-{
+ var questions = [
+ {
   title: "Wie geht es Ihnen",
   options: ["gut Danke", "es geht", "gut"],
   rightAnswer: 0,
@@ -48,8 +51,8 @@ function answerChecked () {
 
   }
 }
-
- function getCurentStoryEl () {
+/*the html structur*/
+function getCurentStoryEl () {
   return document.getElementById('story-' + currentStory);
 }
 
@@ -67,5 +70,13 @@ function goToNextStory () {
   currentStory++;
   makeStoryActive(currentStory);
 }
-update();
+/*the html structur*/
+
+
+function logIn (){
+  var user = $("#userName").val();
+  loginNames.push(user);
+  console.log(loginNames);
+  document.getElementById('currentUser').innerHTML = user;
+}
 
