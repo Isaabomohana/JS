@@ -34,6 +34,7 @@ function isCorrentAnswer(options) {
   return question.options.indexOf(option) === question.rightAnswer;
 }
 function update () {
+
   var question = questions[questionCursor]
   document.getElementById('fragen').innerHTML = question.title ;
   document.getElementById('ans1').innerHTML = question.options[0];
@@ -42,55 +43,49 @@ function update () {
 }
 function answerChecked () {
   for (var i=0; i = questions[i].options.length; i++){
-    if (questions[questionCursor].options[i].checked === questions[i].rightAnswer){
-      questionCursor +=1 ;
-
-    } else{
-      console.log("false");
+    console.log(questionCursor);
+    console.log(questions[questionCursor]);
+    
     }
-
   }
-}
-/*the html structur*/
-function getCurentStoryEl () {
-  return document.getElementById('story-' + currentStory);
-}
+  /*the html structur*/
+  function getCurentStoryEl () {
+    return document.getElementById('story-' + currentStory);
+  }
 
-function makeContentItemActive (contentItem) {
+  function makeContentItemActive (contentItem) {
 
-  $('.content-item').removeClass('active');
-  $('.content-item-' + contentItem).addClass('active');
-}
+    $('.content-item').removeClass('active');
+    $('.content-item-' + contentItem).addClass('active');
+  }
 
-function makeStoryActive (storyId) {
-  $('.story').removeClass('active');
-  $('#story-' + storyId).addClass('active');
-}
+  function makeStoryActive (storyId) {
+    $('.story').removeClass('active');
+    $('#story-' + storyId).addClass('active');
+  }
 
-function goToNextStory () {
-  currentStory++;
-  makeStoryActive(currentStory);
-}
-/*the html structur*/
-
-
-function logIn (){
-  var user = $("#userName").val();
-  loginNames.push(user);
-  console.log(loginNames);
-  document.getElementById('currentUser').innerHTML = user;
-}
+  function goToNextStory () {
+    currentStory++;
+    makeStoryActive(currentStory);
+  }
+  /*the html structur*/
 
 
-function setup (){
-  $('#storyLink').click(function() { makeContentItemActive('stories') })
-  $('#homePage').click(function() { makeContentItemActive('login') })
-  $('#aboutPage').click(function() { makeContentItemActive('about') })
-}
+  function logIn (){
+    var user = $("#userName").val();
+    loginNames.push(user);
+    console.log(loginNames);
+    document.getElementById('currentUser').innerHTML = user;
+    $(".content").hide();
+  }
 
+  function setup (){
+    $('#storyLink').click(function() { makeContentItemActive('stories') })
+    $('#homePage').click(function() { makeContentItemActive('login') })
+    $('#aboutPage').click(function() { makeContentItemActive('about') })
+    update();
+  }
+  setup();
 
-
-
-setup()
 
 
