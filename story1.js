@@ -57,6 +57,7 @@ function getCurentStoryEl () {
 }
 
 function makeContentItemActive (contentItem) {
+  
   $('.content-item').removeClass('active');
   $('.content-item-' + contentItem).addClass('active');
 }
@@ -79,6 +80,14 @@ function logIn (){
   console.log(loginNames);
   document.getElementById('currentUser').innerHTML = user;
 }
+
+
+function setup (){
+  $('#storyLink').click(function() { makeContentItemActive('stories') })
+}
+
+
+setup()
 
 
 
