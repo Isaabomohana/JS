@@ -80,3 +80,5 @@ function logIn (){
   document.getElementById('currentUser').innerHTML = user;
 }
 
+
+
