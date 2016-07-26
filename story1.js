@@ -5,7 +5,7 @@
  var loginNames = [];
 
  var questionCursor = 0;
-
+ var progressbar = 0;
 
 
  var questions = [
@@ -39,9 +39,12 @@ function update () {
 }
 function answerChecked (evt) {
   evt.preventDefault();
-    var rightAnswer = questions[questionCursor].rightAnswer;
+  var rightAnswer = questions[questionCursor].rightAnswer;
   if ($("[data-index="+rightAnswer+"]").prop("checked")){
     console.log(rightAnswer);
+    progressbar = progressbar + 10 ;
+    $( ".progress-bar-class" ).html( progressbar + "%" + "success");
+    $ (".progress-bar-success").css("width", progressbar + "%");
     questionCursor = questionCursor +1;
     console.log(questionCursor);
     update();
