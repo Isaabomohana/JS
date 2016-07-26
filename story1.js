@@ -81,6 +81,7 @@ function logIn (){
   console.log(loginNames);
   document.getElementById('currentUser').innerHTML = user;
   $(".content").hide();
+  $('.navbar').addClass("active");
 }
 
 function setup (){
