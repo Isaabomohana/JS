@@ -5,14 +5,13 @@
  .story {
  	display: none;
  }
-
-  .navbar {
+ .navbar {
  	display: none;
  }
  .active {
  	display: block;
  }
- 
+
  body{
  	background: url(images/berlin,Background.jpg) no-repeat center center fixed; 
  	-webkit-background-size: cover;
